@@ -1,0 +1,16 @@
+{
+  "techs": [
+    {
+      "value": 1,
+      "label": "React"
+    },
+    {
+      "value": 2,
+      "label": "Laravel"
+    },
+    {
+      "value": 3,
+      "label": "Nodejs"
+    }
+  ]
+}

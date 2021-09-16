@@ -1,0 +1,29 @@
+{
+  "devList": {
+    "_page": 1,
+    "_limit": 1,
+    "devs": [
+      {
+        "id": 1,
+        "name": "Mario Campbell",
+        "profession": "Diseñador Gráfico",
+        "position": "Frontend",
+        "technology": "React"
+      },
+      {
+        "id": 2,
+        "name": "Nicolás Berdú",
+        "profession": "Ingeniero en Sistemas",
+        "position": "Backend",
+        "technology": "Laravel"
+      },
+      {
+        "id": 3,
+        "name": "Carlos Soria",
+        "profession": "Ingeniero en Sistemas",
+        "position": "Fullstack",
+        "technology": "Nodejs"
+      }
+    ]
+  }
+}
