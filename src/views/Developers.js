@@ -1,9 +1,17 @@
 import { Card, CardHeader, CardBody, CardTitle, Breadcrumb, BreadcrumbItem, Button, Pagination, PaginationItem, PaginationLink } from 'reactstrap'
 import { Home } from 'react-feather'
 import DataTable from 'react-data-table-component'
+import useDevList from '../utility/hooks/useDevList'
 
-import DevList from '../db.json'
-const devList = DevList
+// Este código comentado corresponde a un archivo que simula la base de datos.
+// Fué reemplazado por la API hecha en Laravel
+// import DevList from '../db.json'
+// const devList = DevList
+
+// El archivo devList.json fué usado también en principio con json-server para simular una API
+
+// Obteniendo desarrolladores desde API hecha en Laravel
+const DEVS_API = 'http://sitenso.test/api/v1/developers'
 
 const columns = [
   {
@@ -29,6 +37,8 @@ const columns = [
 ]
 
 const Developers = () => {
+  const devList = useDevList(DEVS_API)
+  console.log(devList)
 
   return (
     <Card>
@@ -47,21 +57,11 @@ const Developers = () => {
       <CardBody>
         <DataTable
           columns={columns}
-          data={devList.devs}
+          data={devList.data}
           selectableRows
           pagination
+          paginationPerPage="3"
         />
-        {/* <Pagination>
-          <PaginationItem className='prev-item'>
-            <PaginationLink href='#'></PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href='#'>1</PaginationLink>
-          </PaginationItem>
-          <PaginationItem className='next-item'>
-            <PaginationLink href='#'></PaginationLink>
-          </PaginationItem>
-        </Pagination> */}
       </CardBody>
     </Card>
   )
